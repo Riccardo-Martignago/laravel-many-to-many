@@ -6,9 +6,8 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h2 class="card-title">{{ $project->name }}</h2>
-                <p class="card-text">{{ $project->type }}</p>
-                <p class="card-text">{{ $project->description }}</p>
                 <p>Tipo: {{ $project->type->name }}</p>
+                <p class="card-text">{{ $project->description }}</p>
                 <a href="{{ route('admin.projects.index') }}" class="card-link">Torna alla lista</a>
             </div>
         </div>
