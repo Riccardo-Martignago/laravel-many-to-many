@@ -35,6 +35,7 @@ class ProjectController extends Controller
         $data = $request->validate([
             'name' => ['required', 'string', 'max:20'],
             'description' => ['required', 'string', 'max:500'],
+            'type_id' => ['required', 'exists:types,id'],
         ]);
 
         $newProject = Project::create($data);
